@@ -597,6 +597,43 @@ footer {
   .hero-actions .btn-ghost { width: auto; min-width: 200px; }
 }
 
+/* ── CONTACT STRIP ── */
+.contact-section {
+  border-top: 1px solid var(--border);
+  padding: 28px clamp(24px, 6vw, 80px);
+  background: rgba(61,47,176,0.025);
+}
+.contact-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.contact-text {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.contact-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--indigo);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(61,47,176,0.25);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.contact-link:hover {
+  color: var(--indigo-dark);
+  border-color: var(--indigo-dark);
+}
+@media (max-width: 640px) {
+  .contact-inner { flex-direction: column; gap: 6px; text-align: center; }
+}
+
+
 /* ── ACCESSIBILITY ── */
 :focus-visible {
   outline: 2px solid var(--indigo);
@@ -901,6 +938,19 @@ footer {
   <div id="successMsg"><p>&#10024;&nbsp;<span data-en>You&rsquo;re on the list. We&rsquo;ll be in touch soon.</span><span data-es>Est&aacute;s en la lista. Te escribiremos pronto.</span></p></div>
 </section>
 
+<!-- CONTACT -->
+<section class="contact-section">
+  <div class="contact-inner">
+    <p class="contact-text">
+      <span data-en>Questions? We&rsquo;d love to hear from you.</span>
+      <span data-es>&iquest;Preguntas? Nos encanta escucharte.</span>
+    </p>
+    <a class="contact-link" href="mailto:appgoparent&#64;gmail.com">
+      appgoparent&#64;gmail.com
+    </a>
+  </div>
+</section>
+
 </main>
 
 <!-- FOOTER -->
@@ -913,7 +963,7 @@ footer {
   <div class="footer-links">
     <a href="#"><span data-en>Privacy</span><span data-es>Privacidad</span></a>
     <a href="#"><span data-en>Terms</span><span data-es>T&eacute;rminos</span></a>
-    <a href="mailto:hello&#64;goparent.app">Contact</a>
+    <a href="mailto:appgoparent@gmail.com">appgoparent&#64;gmail.com</a>
   </div>
 </footer>
 
@@ -978,6 +1028,9 @@ footer {
     var input = document.getElementById('emailInput');
     var val = (input.value || '').trim();
     if (val && val.indexOf('@') > 0) {
+      var subject = encodeURIComponent('Early Access Request — GoParent');
+      var body = encodeURIComponent('Hi GoParent team,\n\nI\'d like to get early access to the app.\n\nMy email: ' + val + '\n\nThanks!');
+      window.location.href = 'mailto:appgoparent@gmail.com?subject=' + subject + '&body=' + body;
       document.querySelector('.email-form').style.display = 'none';
       document.querySelector('.cta-note').style.display  = 'none';
       document.getElementById('successMsg').style.display = 'block';
