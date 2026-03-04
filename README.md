@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,9 +42,10 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: 'DM Sans', sans-serif;
+  font-size: 17px;
   font-weight: 400;
   overflow-x: hidden;
-  line-height: 1.7;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -155,7 +159,7 @@ nav {
 
 h1 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(2.6rem, 6vw, 5.6rem);
+  font-size: clamp(3rem, 6.5vw, 6.2rem);
   font-weight: 700;
   line-height: 1.06;
   letter-spacing: -0.03em;
@@ -168,7 +172,7 @@ h1 {
 h1 em { font-style: italic; color: var(--indigo); }
 
 .hero-sub {
-  font-size: clamp(1rem, 2vw, 1.15rem);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
   color: var(--muted);
   max-width: 500px;
   margin-bottom: 44px;
@@ -282,8 +286,8 @@ h1 em { font-style: italic; color: var(--indigo); }
 
 /* ── SECTIONS ── */
 section {
-  padding: clamp(64px, 9vw, 128px) clamp(24px, 6vw, 80px);
-  max-width: 1200px;
+  padding: clamp(64px, 9vw, 128px) clamp(24px, 5vw, 64px);
+  max-width: 1380px;
   margin: 0 auto;
 }
 
@@ -311,7 +315,7 @@ section {
 }
 h2 {
   font-family: 'Fraunces', serif;
-  font-size: clamp(1.9rem, 3.8vw, 3.3rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.8rem);
   font-weight: 700;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -319,7 +323,7 @@ h2 {
   margin-bottom: 18px;
 }
 h2 em { font-style: italic; color: var(--indigo); }
-.section-desc { font-size: 1.05rem; color: var(--muted); max-width: 540px; line-height: 1.8; }
+.section-desc { font-size: 1.1rem; color: var(--muted); max-width: 560px; line-height: 1.85; }
 
 /* ── PROBLEM ── */
 .problem-layout {
@@ -350,7 +354,7 @@ h2 em { font-style: italic; color: var(--indigo); }
 }
 .quote-text {
   font-family: 'Fraunces', serif;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   font-style: italic;
   color: var(--ink);
   line-height: 1.55;
@@ -391,11 +395,11 @@ h2 em { font-style: italic; color: var(--indigo); }
   line-height: 1;
   padding-top: 4px;
 }
-.step h3 { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-.step p  { color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+.step h3 { font-family: 'Fraunces', serif; font-size: 1.6rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+.step p  { color: var(--muted); font-size: 1rem; line-height: 1.75; }
 
 /* ── RAVR BLOCK ── */
-.ravr-wrap { padding: 0 clamp(16px,4vw,48px); max-width: 1296px; margin: 0 auto; }
+.ravr-wrap { padding: 0 clamp(16px,4vw,48px); max-width: 1460px; margin: 0 auto; }
 .ravr-section {
   background: var(--indigo);
   border-radius: 32px;
@@ -451,8 +455,8 @@ h2 em { font-style: italic; color: var(--indigo); }
 }
 .feature-card:hover { box-shadow: var(--shadow-md); border-color: rgba(61,47,176,0.18); transform: translateY(-4px); }
 .feature-emoji { font-size: 2rem; margin-bottom: 18px; display: block; }
-.feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
-.feature-card p  { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+.feature-card h3 { font-family: 'Fraunces', serif; font-size: 1.25rem; font-weight: 500; color: var(--ink); margin-bottom: 8px; }
+.feature-card p  { font-size: 0.95rem; color: var(--muted); line-height: 1.75; }
 
 /* ── TESTIMONIALS ── */
 .testimonials-grid {
@@ -469,7 +473,7 @@ h2 em { font-style: italic; color: var(--indigo); }
   box-shadow: var(--shadow-sm);
 }
 .stars { color: var(--teal-dark); font-size: 0.85rem; margin-bottom: 18px; letter-spacing: 3px; display: block; }
-.testimonial-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 1rem; color: var(--ink); line-height: 1.65; margin-bottom: 22px; }
+.testimonial-text { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.08rem; color: var(--ink); line-height: 1.65; margin-bottom: 22px; }
 .testimonial-author { display: flex; align-items: center; gap: 13px; }
 .avatar { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:600; font-family:'Fraunces',serif; flex-shrink:0; }
 .av1 { background: rgba(0,184,148,0.12); color: var(--teal-dark); }
@@ -604,7 +608,7 @@ footer {
   background: rgba(61,47,176,0.025);
 }
 .contact-inner {
-  max-width: 1200px;
+  max-width: 1380px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -945,7 +949,7 @@ footer {
       <span data-en>Questions? We&rsquo;d love to hear from you.</span>
       <span data-es>&iquest;Preguntas? Nos encanta escucharte.</span>
     </p>
-    <a class="contact-link" href="mailto:appgoparent&#64;gmail.com">
+    <a class="contact-link" href="mailto:appgoparent@gmail.com">
       appgoparent&#64;gmail.com
     </a>
   </div>
